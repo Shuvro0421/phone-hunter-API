@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.2/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Again Practice</title>
+</head>
+
+<body>
+
+    <header>
+        <h1 class="text-5xl mt-7 font-bold text-pink-500 text-center">Phone Hunter</h1>
+    </header>
+    <main>
+        <!-- search -->
+        <div class="mt-10 flex flex-row items-center justify-center gap-3 bg-slate-300 p-7 m-5 rounded-lg shadow-lg">
+            <input id="search-field" type="text" placeholder="Search..." class="input input-bordered w-full max-w-xs" />
+            <button class="btn btn-outline btn-primary" onclick="handleSearch()">Search</button>
+        </div>
+        <!-- loader -->
+        <div class="text-center text-red-400 hidden" id="loading-infinity">
+            <span class="loading loading-infinity loading-lg"></span>
+        </div>
+        <!-- modal -->
+        <div>
+            <!-- Open the modal using ID.showModal() method -->
+            <dialog id="my_modal" class="modal">
+                <form method="dialog" class="modal-box">
+                    
+                    <div id="show-detail-container" class="flex flex-col items-center justify-center space-y-4 mt-4">
+                        
+                    </div>
+                    <p class="py-4"></p>
+                    <div class="modal-action">
+                        <!-- if there is a button in form, it will close the modal -->
+                        <button class="btn text-red-500">X</button>
+                    </div>
+                </form>
+            </dialog>
+        </div>
+        <!-- search titles -->
+        <div class="mt-8 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6 m-5" id="phone-container">
+
+        </div>
+
+        <div id="show-all" class="text-center my-8 hidden">
+            <button class="btn btn-primary btn-outline" onclick="showAllPhones()">Show All</button>
+        </div>
+    </main>
+
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
